@@ -4,164 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shubham Kumar | Senior Data Scientist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f7f9fc, #eef2f7);
-      color: #2c3e50;
-    }
-    .header {
-      background-color: #1e3a8a;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      animation: fadeInDown 1s ease-in-out;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1s ease-in-out;
-    }
-    h2 {
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-      color: #1e3a8a;
-    }
-    .section p, .section ul {
-      margin: 0.5rem 0 1rem 0;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .contact {
-      text-align: center;
-      font-size: 0.95rem;
-      margin-top: 1rem;
-    }
-    .contact a {
-      color: #3b82f6;
-      text-decoration: none;
-    }
-    .job-title {
-      font-weight: 600;
-      margin-top: 0.5rem;
-    }
-    .tagline {
-      font-style: italic;
-      color: #475569;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
-      color: #94a3b8;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
-<body>
-  <div class="header">
-    <h1>Shubham Kumar</h1>
-    <p class="tagline">Senior Data Scientist | Healthcare, Pharma & Finance | AI, ML & NLP Expert</p>
-    <div class="contact">
-      Bangalore, India · <a href="tel:+916363542158">+91 6363542158</a> · <a href="mailto:shubham.aiverse@gmail.com">shubham.aiverse@gmail.com</a><br>
-      <a href="https://linkedin.com/in/shabam23" target="_blank">LinkedIn</a> · <a href="https://github.com/Shubh-kr" target="_blank">GitHub</a>
-    </div>
-  </div>
+<body class="bg-gray-900 text-white font-inter">
+  <header class="bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 py-12 text-center">
+    <h1 class="text-4xl font-extrabold">Shubham Kumar</h1>
+    <p class="text-lg mt-2 italic">Senior Data Scientist | AI/ML Expert in Healthcare, Pharma & Finance</p>
+    <p class="mt-4 text-sm text-indigo-100">
+      📍 Bangalore · 📞 +91 6363542158 · ✉️ <a href="mailto:shubham.aiverse@gmail.com" class="underline">shubham.aiverse@gmail.com</a><br>
+      <a href="https://linkedin.com/in/shabam23" target="_blank" class="underline">LinkedIn</a> · <a href="https://github.com/Shubh-kr" target="_blank" class="underline">GitHub</a>
+    </p>
+  </header>
 
-  <div class="container">
-    <div class="section">
-      <h2>Summary</h2>
-      <p>Experienced Data Scientist with 6+ years designing scalable ML & NLP solutions across healthcare, pharma marketing, and finance. Adept at delivering business impact through intelligent automation, predictive modeling, and cloud-native architectures.</p>
-    </div>
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🔍 Summary</h2>
+      <p class="text-gray-300">Experienced Data Scientist with 6+ years of designing and deploying scalable AI/ML solutions in regulated domains. Proven track record of turning business problems into data products using Python, NLP, and cloud technologies.</p>
+    </section>
 
-    <div class="section">
-      <h2>Work Experience</h2>
-      <h3>Deloitte USI, Bengaluru</h3>
-      <p class="job-title">Senior Data Scientist | Apr 2021 – Present</p>
-      <ul>
-        <li>Built solutions like discount optimizer & recommender system, increasing profit by 10%.</li>
-        <li>Led HCC cohort analysis for 10 markets, improving vaccination insights & engagement.</li>
-        <li>Reduced operational costs by 41% through architecture modernization initiatives.</li>
-        <li>Developed financial forecasting models impacting $20B in assets.</li>
-      </ul>
-      <h3>Edubridge Learning, Remote</h3>
-      <p class="job-title">Data Scientist & Trainer | Jan 2020 – Mar 2021</p>
-      <ul>
-        <li>Designed ML solution for credit scoring; conducted workshops for 1000+ students.</li>
-        <li>Built real-time voice analytics pipeline with speech-to-text and emotion detection.</li>
-      </ul>
-      <h3>INSAID, Gurugram</h3>
-      <p class="job-title">Data Science Researcher | Aug 2018 – Dec 2019</p>
-      <ul>
-        <li>Developed 3 AI/ML products; generated $1.7M+ revenue.</li>
-        <li>Revamped CRM workflows and drove 1.2x sales growth.</li>
-      </ul>
-    </div>
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">💼 Experience</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold">Deloitte USI, Bengaluru</h3>
+          <p class="text-sm italic">Senior Data Scientist · Apr 2021 – Present</p>
+          <ul class="list-disc list-inside text-gray-300 mt-2">
+            <li>Led patient funnel and sales optimization models that drove 90% sales target achievement.</li>
+            <li>Built ML-based discount optimizer and recommender engine resulting in 10% margin increase.</li>
+            <li>Architected forecasting models supporting $20B financial planning workflows.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Edubridge Learning (Remote)</h3>
+          <p class="text-sm italic">Data Scientist & Trainer · Jan 2020 – Mar 2021</p>
+          <ul class="list-disc list-inside text-gray-300 mt-2">
+            <li>Developed end-to-end credit risk models and voice analytics tools for live meetings.</li>
+            <li>Delivered Python/ML curriculum to 1000+ learners, boosting product stickiness and retention.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">INSAID, Gurugram</h3>
+          <p class="text-sm italic">Data Science Researcher · Aug 2018 – Dec 2019</p>
+          <ul class="list-disc list-inside text-gray-300 mt-2">
+            <li>Built 3 NLP/ML-based product features, generating $1.7M in business value.</li>
+            <li>Automated CRM reporting and saved 500+ hours annually.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>B.Tech</strong>, University of Petroleum & Energy Studies, Dehradun (2014–2018)</p>
-    </div>
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🎓 Education</h2>
+      <p class="text-gray-300">B.Tech – University of Petroleum & Energy Studies, Dehradun (2014–2018)</p>
+    </section>
 
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <ul>
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🛠️ Technical Skills</h2>
+      <ul class="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-300">
         <li><strong>Languages:</strong> Python, R, PySpark</li>
-        <li><strong>Frameworks:</strong> Flask, Scikit-learn, Transformers, TensorFlow</li>
-        <li><strong>Databases:</strong> SQL, AWS Redshift, DynamoDB, S3</li>
-        <li><strong>Tools:</strong> Dataiku, Git, Jupyter, SHAP, LIME, Power BI</li>
+        <li><strong>Frameworks:</strong> Scikit-learn, Transformers, Flask, TensorFlow</li>
+        <li><strong>Databases:</strong> SQL, Redshift, DynamoDB, S3</li>
+        <li><strong>Tools:</strong> Dataiku, Git, Power BI, Jupyter, SHAP, LIME</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">📜 Certifications</h2>
+      <ul class="list-disc list-inside text-gray-300">
         <li>Certified Data Scientist – AnalytixLabs</li>
         <li>MLOps Practitioner – Dataiku</li>
         <li>AWS Developer Series – EdX</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Achievements</h2>
-      <ul>
+    <section>
+      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🏅 Achievements</h2>
+      <ul class="list-disc list-inside text-gray-300">
         <li>Outstanding Performance Award – Deloitte</li>
-        <li>Applause Award for leadership & teamwork</li>
+        <li>Applause Award for leadership & collaboration</li>
         <li>Employee of the Quarter – Q1’19</li>
       </ul>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="footer">
-    © Shubham Kumar — Senior Data Scientist | Hosted on GitHub Pages
-  </div>
+  <footer class="text-center py-6 text-sm text-gray-400 border-t border-gray-700">
+    © 2025 Shubham Kumar · Built with Tailwind CSS · Hosted on GitHub Pages
+  </footer>
 </body>
 </html>
