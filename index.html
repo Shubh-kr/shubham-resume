@@ -3,61 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Kumar | Resume</title>
+  <title>Shubham Kumar | Senior Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #fff;
-    }
-    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f7f9fc, #eef2f7);
       color: #2c3e50;
     }
-    .section {
-      margin-bottom: 2rem;
+    .header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      color: #1e3a8a;
+    }
+    .section p, .section ul {
+      margin: 0.5rem 0 1rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .contact {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 1rem;
     }
     .contact a {
-      color: #3498db;
+      color: #3b82f6;
       text-decoration: none;
     }
     .job-title {
-      font-weight: bold;
+      font-weight: 600;
       margin-top: 0.5rem;
     }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
+    .tagline {
+      font-style: italic;
+      color: #475569;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     .footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 2rem;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="header">
     <h1>Shubham Kumar</h1>
+    <p class="tagline">Senior Data Scientist | Healthcare, Pharma & Finance | AI, ML & NLP Expert</p>
     <div class="contact">
-      Bangalore, India | +91 6363542158 | <a href="mailto:shubham.aiverse@gmail.com">shubham.aiverse@gmail.com</a><br>
-      <a href="http://linkedin.com/in/shabam23">LinkedIn</a> | <a href="http://github.com/Shubh-kr">GitHub</a>
+      Bangalore, India · <a href="tel:+916363542158">+91 6363542158</a> · <a href="mailto:shubham.aiverse@gmail.com">shubham.aiverse@gmail.com</a><br>
+      <a href="https://linkedin.com/in/shabam23" target="_blank">LinkedIn</a> · <a href="https://github.com/Shubh-kr" target="_blank">GitHub</a>
     </div>
+  </div>
 
+  <div class="container">
     <div class="section">
       <h2>Summary</h2>
-      <p>Senior Data Scientist with 6+ years of experience in designing scalable ML and NLP solutions across healthcare, pharma marketing, and finance. Proven ability in optimizing data pipelines and delivering actionable insights through innovative modeling and analytics techniques.</p>
+      <p>Experienced Data Scientist with 6+ years designing scalable ML & NLP solutions across healthcare, pharma marketing, and finance. Adept at delivering business impact through intelligent automation, predictive modeling, and cloud-native architectures.</p>
     </div>
 
     <div class="section">
@@ -65,41 +107,37 @@
       <h3>Deloitte USI, Bengaluru</h3>
       <p class="job-title">Senior Data Scientist | Apr 2021 – Present</p>
       <ul>
-        <li>Led sales optimization initiatives leading to 90% target achievement and increased revenue.</li>
-        <li>Developed discount optimizer and recommendation engines—10% profit and 4.5% sales growth.</li>
-        <li>Built HCC Patient Funnel dashboard for cohort tracking and strategy refinement across 10 markets.</li>
-        <li>Reduced architecture operational costs by 41% through optimization projects.</li>
-        <li>Developed forecasting models for financial planning impacting $20B in client assets.</li>
+        <li>Built solutions like discount optimizer & recommender system, increasing profit by 10%.</li>
+        <li>Led HCC cohort analysis for 10 markets, improving vaccination insights & engagement.</li>
+        <li>Reduced operational costs by 41% through architecture modernization initiatives.</li>
+        <li>Developed financial forecasting models impacting $20B in assets.</li>
       </ul>
-
       <h3>Edubridge Learning, Remote</h3>
       <p class="job-title">Data Scientist & Trainer | Jan 2020 – Mar 2021</p>
       <ul>
-        <li>Created ML-based credit scoring model aligned with market needs.</li>
-        <li>Developed real-time voice recognition & analytics with emotion detection using transfer learning.</li>
+        <li>Designed ML solution for credit scoring; conducted workshops for 1000+ students.</li>
+        <li>Built real-time voice analytics pipeline with speech-to-text and emotion detection.</li>
       </ul>
-
       <h3>INSAID, Gurugram</h3>
       <p class="job-title">Data Science Researcher | Aug 2018 – Dec 2019</p>
       <ul>
-        <li>Launched 3 AI/ML modules generating $1.7M+ in business.</li>
-        <li>Taught 2,000+ students and restructured CRM strategy, driving 1.2x sales growth.</li>
-        <li>Saved 500 hours by automating workflows—1M INR cost reduction.</li>
+        <li>Developed 3 AI/ML products; generated $1.7M+ revenue.</li>
+        <li>Revamped CRM workflows and drove 1.2x sales growth.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Education</h2>
-      <p><strong>B.Tech</strong> – University of Petroleum & Energy Studies, Dehradun (2014–2018)</p>
+      <p><strong>B.Tech</strong>, University of Petroleum & Energy Studies, Dehradun (2014–2018)</p>
     </div>
 
     <div class="section">
       <h2>Technical Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> Python, R, PySpark (basic), TensorFlow</li>
-        <li><strong>Frameworks:</strong> Flask, Scikit-learn, Transformers, Microservices</li>
-        <li><strong>Databases:</strong> SQL, AWS S3, DynamoDB, Redshift</li>
-        <li><strong>Tools:</strong> Dataiku, Git, Jupyter, NLP, Recommendation Systems</li>
+        <li><strong>Languages:</strong> Python, R, PySpark</li>
+        <li><strong>Frameworks:</strong> Flask, Scikit-learn, Transformers, TensorFlow</li>
+        <li><strong>Databases:</strong> SQL, AWS Redshift, DynamoDB, S3</li>
+        <li><strong>Tools:</strong> Dataiku, Git, Jupyter, SHAP, LIME, Power BI</li>
       </ul>
     </div>
 
@@ -116,14 +154,14 @@
       <h2>Achievements</h2>
       <ul>
         <li>Outstanding Performance Award – Deloitte</li>
-        <li>Applause Award for leadership and teamwork</li>
+        <li>Applause Award for leadership & teamwork</li>
         <li>Employee of the Quarter – Q1’19</li>
       </ul>
     </div>
+  </div>
 
-    <div class="footer">
-      © Shubham Kumar | Hosted on GitHub Pages
-    </div>
+  <div class="footer">
+    © Shubham Kumar — Senior Data Scientist | Hosted on GitHub Pages
   </div>
 </body>
 </html>
