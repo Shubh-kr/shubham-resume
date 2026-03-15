@@ -1,106 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Kumar | Senior Data Scientist</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubham Kumar — Senior Data Scientist</title>
+<meta name="description" content="Senior Data Scientist at Deloitte with 6+ years in ML, NLP, MLOps, and GenAI. Building AI solutions in healthcare, pharma, and finance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0f0e0c;
+  --ink2:#3a3830;
+  --paper:#f7f4ef;
+  --paper2:#ede9e2;
+  --accent:#b85c2c;
+  --accent2:#1a4d3a;
+  --line:rgba(15,14,12,0.12);
+  --mono:'DM Mono',monospace;
+  --serif:'DM Serif Display',serif;
+  --sans:'Syne',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-brand{font-family:var(--mono);font-size:13px;letter-spacing:0.05em;color:var(--ink2)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:13px;color:var(--ink2);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding:0 3rem;padding-top:80px;border-bottom:1px solid var(--line)}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding-right:4rem;border-right:1px solid var(--line)}
+.hero-tag{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:8px}
+.hero-tag::before{content:'';display:inline-block;width:20px;height:1px;background:var(--accent)}
+h1{font-family:var(--serif);font-size:clamp(48px,6vw,80px);line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
+h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:15px;line-height:1.8;color:var(--ink2);max-width:440px;margin-bottom:2.5rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--ink);color:var(--paper);padding:0.85rem 2rem;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;display:inline-block}
+.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--ink);padding:0.85rem 2rem;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--line);cursor:pointer;transition:all 0.2s;display:inline-block}
+.btn-outline:hover{border-color:var(--ink);background:var(--paper2)}
+.hero-right{display:flex;flex-direction:column;justify-content:flex-end;padding:3rem 0 3rem 4rem;gap:0}
+.stat-row{display:flex;flex-direction:column;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.stat-row:first-child{border-top:1px solid var(--line)}
+.stat-num{font-family:var(--serif);font-size:48px;color:var(--ink);line-height:1}
+.stat-label{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;color:var(--ink2);margin-top:4px;text-transform:uppercase}
+
+/* TICKER */
+.ticker{background:var(--ink);color:var(--paper);padding:0.7rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:0;animation:ticker 28s linear infinite}
+.ticker-item{font-family:var(--mono);font-size:12px;letter-spacing:0.1em;padding:0 2.5rem;border-right:1px solid rgba(247,244,239,0.2)}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;padding:6rem 3rem;border-bottom:1px solid var(--line);gap:4rem}
+.section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.about h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);line-height:1.1;margin-bottom:1.5rem}
+.about-text{font-size:15px;line-height:1.9;color:var(--ink2)}
+.about-text p+p{margin-top:1rem}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-content:start}
+.skill-card{background:var(--paper2);padding:1.2rem;border:1px solid var(--line)}
+.skill-card-title{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:0.5rem;font-weight:500}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:11px;background:var(--paper);padding:3px 8px;border:1px solid var(--line);color:var(--ink2)}
+
+/* PROJECTS */
+.projects{padding:6rem 3rem;border-bottom:1px solid var(--line)}
+.projects-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem}
+.projects h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.project-card{padding:2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background 0.2s;cursor:pointer;text-decoration:none;display:block;color:inherit}
+.project-card:nth-child(3n){border-right:none}
+.project-card:nth-last-child(-n+3){border-bottom:none}
+.project-card:hover{background:var(--paper2)}
+.project-num{font-family:var(--mono);font-size:11px;color:var(--ink2);opacity:0.5;margin-bottom:1rem}
+.project-title{font-family:var(--serif);font-size:22px;line-height:1.2;margin-bottom:0.75rem;color:var(--ink)}
+.project-desc{font-size:13px;line-height:1.7;color:var(--ink2);margin-bottom:1rem}
+.project-tech{display:flex;flex-wrap:wrap;gap:5px}
+.tech-tag{font-family:var(--mono);font-size:10px;padding:2px 7px;background:var(--ink);color:var(--paper)}
+
+/* EXPERIENCE */
+.experience{padding:6rem 3rem;border-bottom:1px solid var(--line)}
+.experience h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);margin-bottom:3rem}
+.exp-item{display:grid;grid-template-columns:200px 1fr;gap:3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
+.exp-meta{display:flex;flex-direction:column;gap:4px}
+.exp-company{font-weight:700;font-size:15px;color:var(--ink)}
+.exp-period{font-family:var(--mono);font-size:11px;color:var(--ink2);letter-spacing:0.1em}
+.exp-role{font-family:var(--serif);font-size:22px;margin-bottom:0.75rem;color:var(--ink)}
+.exp-desc{font-size:14px;line-height:1.8;color:var(--ink2)}
+.exp-highlights{margin-top:1rem;display:flex;flex-wrap:wrap;gap:6px}
+
+/* CONTACT */
+.contact{padding:6rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--ink)}
+.contact *{color:var(--paper) !important}
+.contact .section-label{color:rgba(247,244,239,0.5) !important}
+.contact h2{font-family:var(--serif);font-size:clamp(36px,5vw,64px);line-height:1.05}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link{display:flex;align-items:center;gap:1rem;padding:1.2rem;border:1px solid rgba(247,244,239,0.15);text-decoration:none;transition:border-color 0.2s}
+.contact-link:hover{border-color:rgba(247,244,239,0.5) !important}
+.contact-link-label{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.5}
+.contact-link-value{font-size:15px;font-weight:600}
+footer{background:var(--ink);padding:1.5rem 3rem;border-top:1px solid rgba(247,244,239,0.1);display:flex;justify-content:space-between;align-items:center}
+footer span{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;color:rgba(247,244,239,0.4)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{gap:1rem}
+  .hero{grid-template-columns:1fr;padding:1.5rem;padding-top:70px}
+  .hero-left{padding-right:0;border-right:none;padding-bottom:2rem}
+  .hero-right{padding:2rem 0 0 0}
+  .about,.contact{grid-template-columns:1fr;padding:4rem 1.5rem}
+  .projects{padding:4rem 1.5rem}
+  .projects-header{flex-direction:column;gap:1.5rem;align-items:flex-start}
+  .projects-grid{grid-template-columns:1fr}
+  .project-card{border-right:none !important}
+  .project-card:nth-last-child(-n+3){border-bottom:1px solid var(--line) !important}
+  .project-card:last-child{border-bottom:none !important}
+  .experience{padding:4rem 1.5rem}
+  .exp-item{grid-template-columns:1fr;gap:0.75rem}
+  footer{flex-direction:column;gap:0.5rem;padding:1.5rem}
+}
+</style>
 </head>
-<body class="bg-gray-900 text-white font-inter">
-  <header class="bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-500 py-12 text-center">
-    <h1 class="text-4xl font-extrabold">Shubham Kumar</h1>
-    <p class="text-lg mt-2 italic">Senior Data Scientist | AI/ML Expert in Healthcare, Pharma & Finance</p>
-    <p class="mt-4 text-sm text-indigo-100">
-      📍 Bangalore · 📞 +91 6363542158 · ✉️ <a href="mailto:shubham.aiverse@gmail.com" class="underline">shubham.aiverse@gmail.com</a><br>
-      <a href="https://linkedin.com/in/shabam23" target="_blank" class="underline">LinkedIn</a> · <a href="https://github.com/Shubh-kr" target="_blank" class="underline">GitHub</a>
-    </p>
-  </header>
+<body>
 
-  <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🔍 Summary</h2>
-      <p class="text-gray-300">Experienced Data Scientist with 6+ years of designing and deploying scalable AI/ML solutions in regulated domains. Proven track record of turning business problems into data products using Python, NLP, and cloud technologies.</p>
-    </section>
+<nav>
+  <span class="nav-brand">SK — Portfolio</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">💼 Experience</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-xl font-semibold">Deloitte USI, Bengaluru</h3>
-          <p class="text-sm italic">Senior Data Scientist · Apr 2021 – Present</p>
-          <ul class="list-disc list-inside text-gray-300 mt-2">
-            <li>Led patient funnel and sales optimization models that drove 90% sales target achievement.</li>
-            <li>Built ML-based discount optimizer and recommender engine resulting in 10% margin increase.</li>
-            <li>Architected forecasting models supporting $20B financial planning workflows.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Edubridge Learning (Remote)</h3>
-          <p class="text-sm italic">Data Scientist & Trainer · Jan 2020 – Mar 2021</p>
-          <ul class="list-disc list-inside text-gray-300 mt-2">
-            <li>Developed end-to-end credit risk models and voice analytics tools for live meetings.</li>
-            <li>Delivered Python/ML curriculum to 1000+ learners, boosting product stickiness and retention.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">INSAID, Gurugram</h3>
-          <p class="text-sm italic">Data Science Researcher · Aug 2018 – Dec 2019</p>
-          <ul class="list-disc list-inside text-gray-300 mt-2">
-            <li>Built 3 NLP/ML-based product features, generating $1.7M in business value.</li>
-            <li>Automated CRM reporting and saved 500+ hours annually.</li>
-          </ul>
-        </div>
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Senior Data Scientist · Bengaluru</div>
+    <h1>Making <em>data</em> speak for itself</h1>
+    <p class="hero-sub">6+ years building ML systems that drive real business outcomes — from NLP pipelines and patient funnel models to LLM-powered analytics at Fortune 500 scale.</p>
+    <div class="hero-ctas">
+      <a href="https://resume.io/r/mfuA7WrjY" class="btn-primary" target="_blank">View Resume</a>
+      <a href="#projects" class="btn-outline">See My Work</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-row">
+      <span class="stat-num">6+</span>
+      <span class="stat-label">Years in ML / AI</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-num">19</span>
+      <span class="stat-label">Public Repositories</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-num">F500</span>
+      <span class="stat-label">Clients Served</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Domains: Health · Pharma · Finance</span>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    <span class="ticker-item">Python</span>
+    <span class="ticker-item">NLP &amp; Text Analytics</span>
+    <span class="ticker-item">LangChain · RAG</span>
+    <span class="ticker-item">MLOps on AWS</span>
+    <span class="ticker-item">SHAP · LIME</span>
+    <span class="ticker-item">Healthcare AI</span>
+    <span class="ticker-item">Pharma Marketing Analytics</span>
+    <span class="ticker-item">Dataiku · Power BI</span>
+    <span class="ticker-item">Patient Funnel Modeling</span>
+    <span class="ticker-item">Vector DBs</span>
+    <span class="ticker-item">Recommender Systems</span>
+    <span class="ticker-item">Python</span>
+    <span class="ticker-item">NLP &amp; Text Analytics</span>
+    <span class="ticker-item">LangChain · RAG</span>
+    <span class="ticker-item">MLOps on AWS</span>
+    <span class="ticker-item">SHAP · LIME</span>
+    <span class="ticker-item">Healthcare AI</span>
+    <span class="ticker-item">Pharma Marketing Analytics</span>
+    <span class="ticker-item">Dataiku · Power BI</span>
+    <span class="ticker-item">Patient Funnel Modeling</span>
+    <span class="ticker-item">Vector DBs</span>
+    <span class="ticker-item">Recommender Systems</span>
+  </span>
+</div>
+
+<section class="about" id="about">
+  <div>
+    <div class="section-label">About</div>
+    <h2>Builder. Problem-solver. Domain expert.</h2>
+    <div class="about-text">
+      <p>I'm Shubham Kumar, a Senior Data Scientist at Deloitte, where I blend deep ML expertise with business strategy to deliver measurable impact in healthcare, pharma marketing, and finance.</p>
+      <p>From training NLP models on clinical notes to building explainability dashboards for black-box algorithms, I care about AI that is not just accurate — but understandable and trustworthy.</p>
+      <p>Currently exploring the frontier of LLMs, RAG pipelines, and LangChain for personalized content delivery at enterprise scale. I once built an emotion detection system from meeting audio that worked scarily well.</p>
+    </div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">ML &amp; AI</div>
+      <div class="skill-tags">
+        <span class="tag">NLP</span><span class="tag">LLMs</span><span class="tag">XGBoost</span><span class="tag">Transformers</span><span class="tag">Sklearn</span>
       </div>
-    </section>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">GenAI Stack</div>
+      <div class="skill-tags">
+        <span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Vector DBs</span><span class="tag">Prompt Eng.</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">MLOps &amp; Cloud</div>
+      <div class="skill-tags">
+        <span class="tag">AWS</span><span class="tag">Dataiku</span><span class="tag">MLflow</span><span class="tag">Docker</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">Explainability</div>
+      <div class="skill-tags">
+        <span class="tag">SHAP</span><span class="tag">LIME</span><span class="tag">DALEX</span><span class="tag">Power BI</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🎓 Education</h2>
-      <p class="text-gray-300">B.Tech – University of Petroleum & Energy Studies, Dehradun (2014–2018)</p>
-    </section>
+<section class="projects" id="projects">
+  <div class="projects-header">
+    <div>
+      <div class="section-label">Projects</div>
+      <h2>Selected Work</h2>
+    </div>
+    <a href="https://github.com/Shubh-kr" class="btn-outline" target="_blank">View All on GitHub →</a>
+  </div>
+  <div class="projects-grid">
+    <a class="project-card" href="https://github.com/Shubh-kr/CreditRiskModelling" target="_blank">
+      <div class="project-num">01</div>
+      <div class="project-title">Credit Risk Modelling</div>
+      <div class="project-desc">Industry-standard credit scoring pipeline with full feature engineering, model benchmarking, and deployment-ready output.</div>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">XGBoost</span><span class="tech-tag">Logistic Reg.</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/Shubh-kr/Model_Interpretability" target="_blank">
+      <div class="project-num">02</div>
+      <div class="project-title">Model Interpretability Suite</div>
+      <div class="project-desc">Explaining black-box algorithms end-to-end using SHAP, LIME, and DALEX with interactive visual dashboards.</div>
+      <div class="project-tech"><span class="tech-tag">SHAP</span><span class="tech-tag">LIME</span><span class="tech-tag">Plotly</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/Shubh-kr/UnderstandingNLP" target="_blank">
+      <div class="project-num">03</div>
+      <div class="project-title">NLP from Zero to Hero</div>
+      <div class="project-desc">A comprehensive guide from bag-of-words to transformers, written in approachable, layman-friendly notebooks.</div>
+      <div class="project-tech"><span class="tech-tag">spaCy</span><span class="tech-tag">HuggingFace</span><span class="tech-tag">BERT</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/Shubh-kr/AutomatedEDA" target="_blank">
+      <div class="project-num">04</div>
+      <div class="project-title">Automated EDA</div>
+      <div class="project-desc">Supercharging exploratory data analysis with pandas-profiling, sweetviz, and R-based visualization packages.</div>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">R</span><span class="tech-tag">Sweetviz</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/Shubh-kr/Topic-modelling" target="_blank">
+      <div class="project-num">05</div>
+      <div class="project-title">Topic Modelling</div>
+      <div class="project-desc">Extracting latent themes from unstructured text corpora using LDA and NMF with interactive visual topic maps.</div>
+      <div class="project-tech"><span class="tech-tag">LDA</span><span class="tech-tag">gensim</span><span class="tech-tag">pyLDAvis</span></div>
+    </a>
+    <a class="project-card" href="https://github.com/Shubh-kr/MachineLearningUsingPython" target="_blank">
+      <div class="project-num">06</div>
+      <div class="project-title">ML with Python</div>
+      <div class="project-desc">End-to-end ML notebooks covering classification, regression, clustering, and ensemble methods with real datasets.</div>
+      <div class="project-tech"><span class="tech-tag">sklearn</span><span class="tech-tag">Pandas</span><span class="tech-tag">NumPy</span></div>
+    </a>
+  </div>
+</section>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🛠️ Technical Skills</h2>
-      <ul class="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-300">
-        <li><strong>Languages:</strong> Python, R, PySpark</li>
-        <li><strong>Frameworks:</strong> Scikit-learn, Transformers, Flask, TensorFlow</li>
-        <li><strong>Databases:</strong> SQL, Redshift, DynamoDB, S3</li>
-        <li><strong>Tools:</strong> Dataiku, Git, Power BI, Jupyter, SHAP, LIME</li>
-      </ul>
-    </section>
+<section class="experience" id="experience">
+  <div class="section-label">Experience</div>
+  <h2>Where I've Worked</h2>
+  <div class="exp-item">
+    <div class="exp-meta">
+      <span class="exp-company">Deloitte</span>
+      <span class="exp-period">Present</span>
+    </div>
+    <div>
+      <div class="exp-role">Senior Data Scientist</div>
+      <div class="exp-desc">Leading ML initiatives for healthcare and pharma marketing clients. Building patient funnel models, conversion optimization systems, and large-scale model explainability dashboards used across enterprise workflows.</div>
+      <div class="exp-highlights">
+        <span class="tag">Patient Funnel Modeling</span><span class="tag">Healthcare Analytics</span><span class="tag">SHAP Dashboards</span><span class="tag">Dataiku</span><span class="tag">AWS</span><span class="tag">Power BI</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">📜 Certifications</h2>
-      <ul class="list-disc list-inside text-gray-300">
-        <li>Certified Data Scientist – AnalytixLabs</li>
-        <li>MLOps Practitioner – Dataiku</li>
-        <li>AWS Developer Series – EdX</li>
-      </ul>
-    </section>
+<section class="contact" id="contact">
+  <div>
+    <div class="section-label">Contact</div>
+    <h2>Let's build something meaningful</h2>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:shubham.aiverse@gmail.com" class="contact-link">
+      <div><div class="contact-link-label">Email</div><div class="contact-link-value">shubham.aiverse@gmail.com</div></div>
+    </a>
+    <a href="https://linkedin.com/in/shabam23" class="contact-link" target="_blank">
+      <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">linkedin.com/in/shabam23</div></div>
+    </a>
+    <a href="https://github.com/Shubh-kr" class="contact-link" target="_blank">
+      <div><div class="contact-link-label">GitHub</div><div class="contact-link-value">github.com/Shubh-kr</div></div>
+    </a>
+    <a href="https://resume.io/r/mfuA7WrjY" class="contact-link" target="_blank">
+      <div><div class="contact-link-label">Resume</div><div class="contact-link-value">View Full Resume</div></div>
+    </a>
+  </div>
+</section>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-4 border-b border-gray-700 pb-2">🏅 Achievements</h2>
-      <ul class="list-disc list-inside text-gray-300">
-        <li>Outstanding Performance Award – Deloitte</li>
-        <li>Applause Award for leadership & collaboration</li>
-        <li>Employee of the Quarter – Q1’19</li>
-      </ul>
-    </section>
-  </main>
+<footer>
+  <span>Shubham Kumar · Senior Data Scientist</span>
+  <span>Bengaluru, India · 2026</span>
+</footer>
 
-  <footer class="text-center py-6 text-sm text-gray-400 border-t border-gray-700">
-    © 2025 Shubham Kumar · Built with Tailwind CSS · Hosted on GitHub Pages
-  </footer>
 </body>
 </html>
